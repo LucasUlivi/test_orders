@@ -1,5 +1,24 @@
 {% extends 'base.html.twig' %}
 
 {% block body %}
-<h1>Bienvenue !</h1>
+<h1>All Orders :</h1>
+
+<table id="orderColumn">
+  <tr>
+    <td>ID</td>
+    <td>Date</td>
+    <td>Amout</td>
+    <td>Currency</td>
+    <td>Billing FirstName</td>
+    <td>Billing LastName</td>
+    <td>Billing email</td>
+    <td>Billing adress</td>
+  </tr>
+</table>
+
+<a href="{{ path('add_order') }}">Add Order</a>
+{% endblock %}
+
+{% block javascripts %}
+  <script type="text/javascript" src="../assets/js/app.js"/>
 {% endblock %}
